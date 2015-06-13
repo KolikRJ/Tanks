@@ -9,5 +9,12 @@ public class World {
 	public void update(){
 		
 	}
+	public void move(){
+		
+	}
+	public void get(){
+		
+	}
+	
 	
 }
