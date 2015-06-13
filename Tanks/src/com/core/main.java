@@ -8,6 +8,7 @@ public class main {
 	
 		JFrame f = new JFrame("Tanks");
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		f.pack();
 		f.setVisible(true); 
 		
 	}
