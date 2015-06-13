@@ -10,6 +10,7 @@ public class main {
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		f.pack();
 		f.setVisible(true); 
+		f.getContentPane();
 		
 	}
 
