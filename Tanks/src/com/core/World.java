@@ -6,7 +6,7 @@ public class World {
 		
 	}
 	
-	public void load(){
+	public void update(){
 		
 	}
 	
