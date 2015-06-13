@@ -6,7 +6,7 @@ public class main {
 
 	public static void main(String[] args) {
 		
-		JFrame f = new JFrame();
+		JFrame f = new JFrame("Tanks");
 		
 	}
 
