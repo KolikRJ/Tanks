@@ -8,7 +8,6 @@ public class main {
 	
 		JFrame f = new JFrame("Tanks");
 		f.setVisible(true);
-		f.create();
 		
 	}
 
