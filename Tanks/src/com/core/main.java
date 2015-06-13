@@ -12,8 +12,7 @@ public class main {
 		f.pack();
 		f.setVisible(true); 
 		f.getContentPane();
-		f.add(new JPanel());
-		
+		f.add(new JPanel());		
 	}
 
 }
