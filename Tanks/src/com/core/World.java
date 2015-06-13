@@ -6,8 +6,5 @@ public class World {
 		
 	}
 	
-	public void load(){
-		
-	}
 	
 }
