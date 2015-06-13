@@ -1,6 +1,7 @@
 package com.core;
 
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class main {
 
@@ -11,6 +12,7 @@ public class main {
 		f.pack();
 		f.setVisible(true); 
 		f.getContentPane();
+		f.add(new JPanel());
 		
 	}
 
