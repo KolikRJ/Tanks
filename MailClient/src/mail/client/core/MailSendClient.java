@@ -26,7 +26,9 @@ public class MailSendClient {
 	}
 
 	public void update() {
-		out.println("Good");
+		out.println("Kolik: asd");
+		out.println("Kolik: Hoaasdasd");
+		out.println("Kolik: Hoaasrtrgffdasd");
 	}
 
 }
