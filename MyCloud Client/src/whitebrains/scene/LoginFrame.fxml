@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="whitebrains.scene.LoginFrameController">
+   <children>
+      <Button fx:id="logBtn" layoutX="305.0" layoutY="249.0" mnemonicParsing="false" onAction="#logBtnAction" prefHeight="34.0" prefWidth="61.0" text="Вход" />
+      <Button fx:id="regBtn" layoutX="179.0" layoutY="249.0" mnemonicParsing="false" onAction="#regBtnAction" prefHeight="34.0" prefWidth="104.0" text="Регистрация" />
+      <TextField fx:id="emailField" layoutX="217.0" layoutY="137.0" />
+      <PasswordField fx:id="passField" layoutX="217.0" layoutY="169.0" />
+      <CheckBox fx:id="rememberCheck" layoutX="281.0" layoutY="213.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="85.0" text="Запомнить" />
+      <Label layoutX="140.0" layoutY="137.0" prefHeight="25.0" prefWidth="52.0" text="Email:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="122.0" layoutY="169.0" prefHeight="25.0" prefWidth="70.0" text="Пароль:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="14.0" prefHeight="95.0" prefWidth="324.0" text="Добро пожаловать в MyCloud">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Text fx:id="messageText" fill="RED" layoutX="12.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="395.13671875" />
+   </children>
+</Pane>

@@ -1,33 +1,61 @@
 package whitebrains.core;
 
-import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.Socket;
-import java.util.Scanner;
 
-import com.google.common.io.Files;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-public class ClientStart {
+public class ClientStart extends Application {
 
-	public static void main(String args[]) throws IOException {
+	private static Scene scene;
+	private static Stage stage;
 
-		System.out.println("Введите путь до файла:");
-		String pathToFile = new Scanner(System.in).nextLine();
+	private static Parent login;
+	private static Parent register;
+	private static Parent key;
+	private static Parent files;
 
-		File file = new File(pathToFile);
-		System.out.println("Файл найден");
+	public static void main(String args[]) {
+		launch(args);
+	}
 
-		Socket server = new Socket("192.168.152.77", 1111);
-		System.out.println("Подключен к серверу");
+	@Override
+	public void start(Stage stage) throws IOException {
+		ClientStart.stage = stage;
+		stage.setTitle("My Cloud Client");
 
-		PrintWriter out = new PrintWriter(server.getOutputStream(), true);
-		out.println(pathToFile.substring(8));
-
-		Files.copy(file, server.getOutputStream());
-
-		server.close();
-		System.out.println("Файл " + pathToFile.substring(8) + " отправлен (" + file.length() + " байт)");
+		login = FXMLLoader.load(getClass().getResource("/whitebrains/scene/LoginFrame.fxml"));
+		register = FXMLLoader.load(getClass().getResource("/whitebrains/scene/RegisterFrame.fxml"));
+		key = FXMLLoader.load(getClass().getResource("/whitebrains/scene/KeyFrame.fxml"));
+		files = FXMLLoader.load(getClass().getResource("/whitebrains/scene/FilesFrame.fxml"));
+		scene = new Scene(login);
+		stage.setScene(scene);
+		// stage.setScene(LoginScene.getScene());
+		// stage.setOnCloseRequest(e -> {
+		// SendCommandsToServer.closeCommand();
+		// System.exit(0);
+		// });
+		stage.setResizable(false);
+		stage.show();
 
 	}
+
+	public static void setLoginScene() {
+		scene.setRoot(login);
+		stage.setHeight(377);
+	}
+
+	public static void setRegisterScene() {
+		scene.setRoot(register);
+		stage.setHeight(377);
+	}
+
+	public static void setKeyScene() {
+		scene.setRoot(key);
+		stage.setHeight(205);
+	}
+
 }

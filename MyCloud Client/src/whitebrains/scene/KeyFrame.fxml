@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="whitebrains.scene.KeyFrameController">
+   <children>
+      <Button fx:id="cancelBtn" layoutX="138.0" layoutY="105.0" mnemonicParsing="false" onAction="#cancelBtnAction" prefHeight="34.0" prefWidth="61.0" text="Отмена" />
+      <Button fx:id="regBtn" layoutX="237.0" layoutY="105.0" mnemonicParsing="false" onAction="#regBtnAction" prefHeight="34.0" prefWidth="129.0" text="Зарегистрироваться" />
+      <TextField fx:id="keyField" layoutX="217.0" layoutY="59.0" />
+      <Label layoutX="169.0" layoutY="59.0" prefHeight="25.0" prefWidth="39.0" text="Код:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" prefHeight="59.0" prefWidth="291.0" text="Введите проверочный код">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Text fx:id="messageText" fill="RED" layoutX="23.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Проверочный код отправлен вам на почту." wrappingWidth="395.13671875" />
+   </children>
+</Pane>
